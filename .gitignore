@@ -1,0 +1,42 @@
+# ZapShift - E-Commerce Platform
+
+# Dependencies
+node_modules/
+.pnp/
+.yarn/
+
+#Testing
+coverage/
+
+# Production builds
+.next/
+out/
+build/
+dist/
+
+# Environment variables  
+.env
+.env*.local
+
+# Debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
