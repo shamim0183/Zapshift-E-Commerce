@@ -4,12 +4,12 @@ import { getAuth } from "firebase/auth"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyAl4RSHslHhQy56hJtzUISkccKFWM1STWE",
-  authDomain: "zap-shift-7a94e.firebaseapp.com",
-  projectId: "zap-shift-7a94e",
-  storageBucket: "zap-shift-7a94e.firebasestorage.app",
-  messagingSenderId: "229535873024",
-  appId: "1:229535873024:web:42a1aa7d5ca3405fd500e5",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 }
 
 // Initialize Firebase
