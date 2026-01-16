@@ -20,71 +20,49 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Parallax Background Image with Overlay */}
-        <div className="absolute inset-0 z-0 select-none">
-          <div className="fixed inset-0 w-full h-full">
-            <img
-              src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop"
-              alt="Background"
-              className="w-full h-full object-cover"
-            />
-            {/* Dark gradient overlay for text readability */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80 dark:from-black/70 dark:via-black/50 dark:to-black/90 backdrop-blur-[1px]"></div>
-          </div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50 dark:from-gray-900 dark:via-purple-900/20 dark:to-blue-900/20">
+        {/* Animated background elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
+          <div
+            className="absolute top-40 right-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
+            style={{ animationDelay: "2s" }}
+          ></div>
+          <div
+            className="absolute -bottom-8 left-1/2 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"
+            style={{ animationDelay: "4s" }}
+          ></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 bg-clip-text text-transparent animate-slide-up drop-shadow-[0_2px_10px_rgba(0,0,0,0.3)]">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent animate-slide-up">
             Welcome to ZapShift
           </h1>
           <p
-            className="text-xl md:text-2xl text-gray-100 mb-10 max-w-3xl mx-auto animate-slide-up drop-shadow-md font-light tracking-wide"
+            className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto animate-slide-up"
             style={{ animationDelay: "0.2s" }}
           >
             Discover premium quality products delivered at lightning speed. Your
             one-stop shop for everything you need.
           </p>
           <div
-            className="flex flex-col sm:flex-row gap-6 justify-center animate-slide-up"
+            className="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up"
             style={{ animationDelay: "0.4s" }}
           >
             <Link
               href="/items"
-              className="px-8 py-4 bg-white text-gray-900 rounded-full font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.3)] flex items-center justify-center space-x-2"
+              className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold text-lg hover:opacity-90 transition-all hover-lift flex items-center justify-center space-x-2"
             >
               <span>Shop Now</span>
               <ArrowRight className="w-5 h-5" />
             </Link>
             <Link
               href="#features"
-              className="px-8 py-4 bg-white/10 backdrop-blur-md text-white rounded-full font-semibold text-lg border border-white/30 hover:bg-white/20 hover:border-white/50 transition-all hover:scale-105 active:scale-95"
+              className="px-8 py-4 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-full font-semibold text-lg border-2 border-gray-300 dark:border-gray-700 hover:border-blue-500 transition-all hover-lift"
             >
               Learn More
             </Link>
           </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce cursor-pointer">
-          <Link
-            href="#features"
-            className="text-white/70 hover:text-white transition-colors"
-          >
-            <svg
-              className="w-10 h-10"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </svg>
-          </Link>
         </div>
       </section>
 
@@ -179,7 +157,7 @@ export default function Home() {
             ].map((item, index) => (
               <div key={index} className="relative">
                 <div className="text-center">
-                  <div className="text-6xl font-bold text-blue-500/50 dark:text-blue-400/50 mb-4">
+                  <div className="text-6xl font-bold text-blue-500/20 dark:text-blue-400/20 mb-4">
                     {item.step}
                   </div>
                   <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center mx-auto mb-4 text-white font-bold text-2xl">
