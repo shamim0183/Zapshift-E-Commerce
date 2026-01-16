@@ -179,7 +179,7 @@ export default function Home() {
             ].map((item, index) => (
               <div key={index} className="relative">
                 <div className="text-center">
-                  <div className="text-6xl font-bold text-blue-500/20 dark:text-blue-400/20 mb-4">
+                  <div className="text-6xl font-bold text-blue-500/50 dark:text-blue-400/50 mb-4">
                     {item.step}
                   </div>
                   <div className="w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center mx-auto mb-4 text-white font-bold text-2xl">
